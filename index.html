@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Luc Etienne Pommé-Cassiérou</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Luc Etienne Pomme Cassierou">
+  <meta name="robots" content="index, follow">
+  <meta name="Keywords"
+    content="luc pomme, luc pomme cassierou, information visualization, deep learning, xai, explainable pruning, computer vision">
+  <meta name="title" content="Luc Etienne Pomme">
+  <meta name="subject"
+    content="Luc Etienne Pomme Cassierou, Information Visualization, Deep Learning, XAI, Explainable Pruning, Computer Vision, Publications">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Raleway", sans-serif
+    }
+
+    a:link,
+    a:visited,
+    a:hover,
+    a:active {
+      text-decoration: none;
+    }
+
+    p.content {
+      text-align: justify;
+      text-justify: inter-word;
+    }
+
+    .code {
+      color: #0080FF;
+      border: solid 1px #0080FF;
+    }
+
+    @keyframes sidebarslide {
+      0% {
+        left: -10%;
+      }
+
+      100% {
+        left: 10%;
+      }
+    }
+
+    .sLidebar {
+      animation-name: sidebarslide;
+      animation-duration: 1s;
+    }
+  </style>
+</head>
+
+<body class="w3-light-grey w3-content" style="max-width:80%">
+
+  <!-- Sidebar/menu -->
+  <nav class="w3-sidebar w3-collapse w3-white sLidebar" style="z-index:3;width:300px" id="mySidebar"><br>
+    <div class="w3-container">
+      <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey"
+        title="close menu">
+        <i class="fa fa-remove"></i>
+      </a>
+      <img src="./resources/perso3.jpeg" style="width:55%;" class="w3-round"><br><br>
+      <!-- <p class="w3-text-grey">Template by W3.CSS</p> -->
+    </div>
+    <div class="w3-bar-block">
+      <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i
+          class="fa fa-user fa-fw w3-margin-right"></i>About me</a>
+      <a href="#research" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i
+          class="fa fa-search fa-fw w3-margin-right"></i>Research</a>
+      <a href="#publications" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i
+          class="fa fa-file-text fa-fw w3-margin-right"></i>Publications</a>
+      <a href="#teaching" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i
+          class="fa fa-graduation-cap fa-fw w3-margin-right"></i>Teaching</a>
+      <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i
+          class="fa fa-envelope fa-fw w3-margin-right"></i>Contact</a>
+    </div>
+    <div class="w3-panel w3-large">
+      <!-- <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i> -->
+    </div>
+  </nav>
+
+  <!-- Overlay effect when opening sidebar on small screens -->
+  <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
+    title="close side menu" id="myOverlay"></div>
+
+
+
+
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-main" style="margin-left:300px">
+
+    <!-- Header -->
+    <header id="portfolio">
+      <a href="#"><img src="/w3images/perso3.jpeg" style="width:65px;"
+          class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+      <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i
+          class="fa fa-bars"></i></span>
+      <div class="w3-container">
+        <h1><b>Luc Etienne Pommé</b></h1>
+        <h2><b>PhD in Computer Science</b></h2>
+        <h3>LaBRI, University of Bordeaux, France</h3>
+        <div class="w3-section w3-bottombar w3-padding-16">
+          <!-- <span class="w3-margin-right">Filter:</span> 
+      <button class="w3-button w3-black">ALL</button> -->
+          <!-- <button class="w3-button w3-white"><i class="fa fa-diamond w3-margin-right"></i>Design</button>
+      <button class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>Photos</button>
+      <button class="w3-button w3-white w3-hide-small"><i class="fa fa-map-pin w3-margin-right"></i>Art</button> -->
+        </div>
+      </div>
+    </header>
+
+    <!-- First Photo Grid-->
+    <!-- <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="/w3images/mountains.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Lorem Ipsum</b></p>
+        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="/w3images/lights.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Lorem Ipsum</b></p>
+        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container">
+      <img src="/w3images/nature.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Lorem Ipsum</b></p>
+        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+      </div>
+    </div>
+  </div> -->
+
+    <!-- Second Photo Grid-->
+    <!-- <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="/w3images/p1.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Lorem Ipsum</b></p>
+        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="/w3images/p2.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Lorem Ipsum</b></p>
+        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container">
+      <img src="/w3images/p3.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Lorem Ipsum</b></p>
+        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+      </div>
+    </div>
+  </div> -->
+
+    <!-- Pagination -->
+    <!-- <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+    </div>
+  </div> -->
+
+    <!-- Images of Me -->
+    <!-- <div class="w3-row-padding w3-padding-16" id="about">
+    <div class="w3-col m6">
+      <img src="/w3images/avatar_g.jpg" alt="Me" style="width:100%">
+    </div>
+    <div class="w3-col m6">
+      <img src="/w3images/me2.jpg" alt="Me" style="width:100%">
+    </div>
+  </div> -->
+
+    <div class="w3-container w3-padding-large" style="margin-bottom:32px">
+      <h2 id="about"><b>About Me</b></h2>
+      <p class="content">Starting from 1st November 2020, I am a PhD Student at the University of Bordeaux in France,
+        under the
+        supervision of <b><a href="https://www.labri.fr/perso/auber/david_auber_home_page/">David Auber</a></b>. I am
+        working in colaboration with SUEZ, <b><a href="https://www.toutsurmesservices.fr/Le-LyRE">Le LyRE</a></b> on the
+        topic of
+        <b><a href="https://www.theses.fr/s346457">``Visualization for the Explanation of Deep Neural
+            Networks''</a></b>.
+      </p>
+      <p class="content">I am a member of the <b>BKB (``Back to Knowledge and Beyond'')</b> team at the <b><a
+            href="https://www.labri.fr/">LaBRI</a></b> institute, and I
+        usually work with <b><a href="https://www.labri.fr/perso/bourqui/">Romain Bourqui</a></b> and <b><a
+            href="https://www.labri.fr/perso/rgiot/">Romain Giot</a></b>. </p>
+      <p class="content">I obtained my Master Degree in Computer Sciences (Image and Sound processing) in 2020 at the
+        University of
+        Bordeaux.</p>
+      <p class="content">I was awarded the <b><a href="https://prix-isabelle-attali.labri.fr/">Isabelle Attali</a></b>
+        prize in 2018.</p>
+      <hr>
+
+      <h2 id="research"><b>Research</b></h2>
+      <h4><b>Keywords</b></h4>
+      <p class="content">Information Visualization, Deep Learning, XAI (eXplainable Artificial Intelligence),
+        Explainable pruning, Computer Vision</p>
+
+      <h4><b>Interests</b></h4>
+      <p class="content">
+        The understanding of the world that surrounds us requires the observation and analysis of the phenomena that
+        govern it.
+        The observation of these phenomena requires the systematic collection of large quantities of data to build
+        models representative of the reality.
+        Eventually, the models are used to extract knowledge and properties about the object of study.
+        <br>
+        <br>
+        The more complex the data, the more difficult it becomes for a human to find processing rules or concepts to
+        extract.
+        This is where AI (e.g. machine / deep learning) algorithms come in to help.
+        The superior performance of these algorithms being no longer in question, they are widely used in matters where
+        decision making is required.
+        <br>
+        <br>
+        In addition to the worrying ecological footprint of these tools, the ethical aspect is also at stake.
+        Indeed, these algorithms are often considered as ``black boxes'', making arbitrary decisions without
+        justification.
+        The question of responsability, in case of bad decision arises.
+        It becomes necessary to build systems enabling to understand the behavior (either good or bad) of such
+        algorithms in order to improve the trust we can put in their decisions.
+        This problem has given rise to a field of research called XAI (eXplainable AI), which is currently in full
+        expansion.
+        <br>
+        <br>
+        Within this research field, I am particularly interested in building new visualizations to highlight AIs
+        behavior, and to try to provide justifications to their decisions.
+        On the other hand, I am interested in tackling the over-parameterization problem of neural networks.
+        Considering neural networks as directed graphs (where <i>nodes</i> are parameters/filters/neurons, and
+        <i>edges</i> are input/output data), my work consists in studying the role of graph nodes and remove those that
+        do not have a significant importance in the decisions.
+        The induced sub-graphs represent sub-networks that achieve comparable performance on a task, with significantly
+        less parameters, operations required to process input data, computation resources, and thus significantly less
+        energy consumption.
+      </p>
+
+      <!-- Progress bars / Skills -->
+      <!-- <p>Photography</p>
+    <div class="w3-grey">
+      <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:95%">95%</div>
+    </div>
+    <p>Web Design</p>
+    <div class="w3-grey">
+      <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:85%">85%</div>
+    </div>
+    <p>Photoshop</p>
+    <div class="w3-grey">
+      <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:80%">80%</div>
+    </div>
+    <p>
+      <button class="w3-button w3-dark-grey w3-padding-large w3-margin-top w3-margin-bottom">
+        <i class="fa fa-download w3-margin-right"></i>Download Resume
+      </button>
+    </p> -->
+      <hr>
+
+      <h2 id="publications"><b>Publications</b></h2>
+      <h4><b>2023</b></h4>
+      <ul class="content">
+        <li>
+          <span class="authors">Luc Etienne Pommé, Romain Bourqui, Romain Giot</span>
+          <span class="title">``H²O: Heatmap by Hierarchical Occlusion'', </span>
+          <span class="target"><i>CBMI 2023</i>, </span>
+          <span class="date">April 2023 </span>
+          <span class="code"><a href="https://github.com/labribkb/h2o"><b>H²O implementation</b></a></span>
+        </li>
+      </ul>
+      <ul class="content">
+        <li>
+          <span class="authors">Luc Etienne Pommé, Romain Bourqui, Romain Giot, Jason Vallet, David Auber</span>
+          <span class="title">``NetPrune: A sparklines visualization for network pruning'', </span>
+          <span class="target"><i>Visual Informatics</i>, </span>
+          <span class="date">May 2023 </span>
+          <span class="doi"><a href="https://doi.org/10.1016/j.visinf.2023.04.001"><b>[10.1016/j.visinf.2023.04.001]</b>
+            </a></span>
+          <span class="code"><a href="https://github.com/lepcassierou/netprune"><b>NetPrune implementation</b></a></span>
+        </li>
+      </ul>
+
+      <h4><b>2022</b></h4>
+      <ul class="content">
+        <li>
+          <span class="authors">Luc Etienne Pommé, Romain Bourqui, Romain Giot, David Auber</span>
+          <span class="title">``Relative Confusion Matrix: Efficient Comparison of Decision Models'', </span>
+          <span class="target"><i>IV2022-IVE-Information Visualization Evaluation & User Studies</i>, </span>
+          <span class="date">Jul 2022, </span>
+          <span class="location">Vienne, Austria</span>
+          <span class="code"><a href="https://github.com/labribkb/rcm"><b>RCM implementation</b></a></span>
+        </li>
+      </ul>
+      <hr>
+      <!-- Pricing Tables -->
+      <!-- <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-third w3-margin-bottom">
+        <ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">
+          <li class="w3-black w3-xlarge w3-padding-32">Basic</li>
+          <li class="w3-padding-16">Web Design</li>
+          <li class="w3-padding-16">Photography</li>
+          <li class="w3-padding-16">1GB Storage</li>
+          <li class="w3-padding-16">Mail Support</li>
+          <li class="w3-padding-16">
+            <h2>$ 10</h2>
+            <span class="w3-opacity">per month</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-teal w3-padding-large w3-hover-black">Sign Up</button>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="w3-third w3-margin-bottom">
+        <ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">
+          <li class="w3-teal w3-xlarge w3-padding-32">Pro</li>
+          <li class="w3-padding-16">Web Design</li>
+          <li class="w3-padding-16">Photography</li>
+          <li class="w3-padding-16">50GB Storage</li>
+          <li class="w3-padding-16">Endless Support</li>
+          <li class="w3-padding-16">
+            <h2>$ 25</h2>
+            <span class="w3-opacity">per month</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-teal w3-padding-large w3-hover-black">Sign Up</button>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="w3-third">
+        <ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">
+          <li class="w3-black w3-xlarge w3-padding-32">Premium</li>
+          <li class="w3-padding-16">Web Design</li>
+          <li class="w3-padding-16">Photography</li>
+          <li class="w3-padding-16">Unlimited Storage</li>
+          <li class="w3-padding-16">Endless Support</li>
+          <li class="w3-padding-16">
+            <h2>$ 25</h2>
+            <span class="w3-opacity">per month</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-teal w3-padding-large w3-hover-black">Sign Up</button>
+          </li>
+        </ul>
+      </div>
+    </div> -->
+
+      <h2 id="teaching"><b>Teaching</b></h2>
+      <h4><b>Master</b></h4>
+      <ul>
+        <li><b>Analysis, Classification, Indexing of Data (ACID) x2</b>, 1st year of Computer Science Master, University
+          of Bordeaux</li>
+        <li><b>Artificial Intelligence</b>, 1st year of Computer Science Master, University of Bordeaux</li>
+      </ul>
+      <hr>
+
+
+      <h4><b>Licence</b></h4>
+      <ul>
+        <li><b>Algorithmics for elementary data structures</b>, 2nd year of Computer Science Licence, University of
+          Bordeaux</li>
+        <li><b>Introduction to software development</b>, 1st year of Computer Science Licence, University of Bordeaux
+        </li>
+      </ul>
+
+
+      <h4><b>IUT (Universitary Technical Institute)</b></h4>
+      <ul>
+        <li><b>Introduction to Programming</b>, 1st year of UIT, University of Bordeaux</li>
+        <li><b>Discrete Mathematics</b>, 1st year of UIT, University of Bordeaux</li>
+        <li><b>Quality in Programming</b>, 1st year of UIT, University of Bordeaux</li>
+      </ul>
+      <hr>
+
+
+      <h4><b>Project supervision</b></h4>
+      <ul>
+        <li><b>Semester Project</b>, 3rd year of Engineering School option AI, ENSEIRB Bordeaux</li>
+        <li><b>Semester Project</b>, 1st year of Computer Science Master, University of Bordeaux</li>
+        <li><b>Graduation Project x2</b>, 2nd year of Software Engineering Master, University of Bordeaux</li>
+        <li><b>Technological Project</b>, 2nd year of Computer Science Licence, University of Bordeaux</li>
+      </ul>
+      <hr>
+
+
+      <h2 id="resources"><b>Resources</b></h2>
+      <p>
+        <a href="https://orcid.org/0000-0002-4690-7260">
+          <img src="./resources/ORCID_iD.png" height="40px" alt="ORCID"> [ 0000-0002-4690-7260 ]
+        </a>
+      </p>
+      <p>
+        <a href="https://hal.archives-ouvertes.fr/search/index/?q=luc-etienne-pomme">
+          <img src="./resources/LogoHAL2.PNG" height="40px" alt="HAL"> [ luc-etienne-pomme ]
+        </a>
+      </p>
+      <p>
+        <a href="https://scholar.google.com/citations?user=J3ieMQgAAAAJ&hl=fr&oi=ao">
+          <img src="./resources/scholar.png" height="40px" alt="Scholar"> [ Luc-Etienne POMMÉ ]
+        </a>
+      </p>
+      <hr>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="w3-container w3-padding-large w3-grey">
+      <h4 id="contact"><b>Contact Me</b></h4>
+      <div class="w3-row-padding w3-center w3-padding-12" style="margin:0 -16px">
+        <a href="mailto:luc.pomme-cassierou@labri.fr">
+          <div class="w3-half w3-dark-grey">
+            <p><i class="fa fa-envelope w3-xxlarge w3-text-light-grey"></i></p>
+            <p>luc.pomme-cassierou@labri.fr</p>
+          </div>
+        </a>
+        <a href="https://maps.app.goo.gl/bMyxiU6xTwJgZFJi7">
+          <div class="w3-half w3-teal">
+            <p><i class="fa fa-map-marker w3-xxlarge w3-text-light-grey"></i></p>
+            <p>351 Cours de la Libération, 33405 Talence, FR</p>
+          </div>
+        </a>
+        <!-- <div class="w3-third w3-dark-grey">
+        <p><i class="fa fa-phone w3-xxlarge w3-text-light-grey"></i></p>
+        <p>512312311</p>
+      </div> -->
+      </div>
+      <hr class="w3-opacity">
+    </div>
+
+    <!-- Footer -->
+    <!-- <footer class="w3-container w3-padding-32 w3-dark-grey">
+  <div class="w3-row-padding">
+    <div class="w3-third">
+      <h3>FOOTER</h3>
+      <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </div>
+  
+    <div class="w3-third">
+      <h3>BLOG POSTS</h3>
+      <ul class="w3-ul w3-hoverable">
+        <li class="w3-padding-16">
+          <img src="/w3images/workshop.jpg" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large">Lorem</span><br>
+          <span>Sed mattis nunc</span>
+        </li>
+        <li class="w3-padding-16">
+          <img src="/w3images/gondol.jpg" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large">Ipsum</span><br>
+          <span>Praes tinci sed</span>
+        </li> 
+      </ul>
+    </div>
+
+    <div class="w3-third">
+      <h3>POPULAR TAGS</h3>
+      <p>
+        <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">London</span>
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom">IKEA</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">NORWAY</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">DIY</span>
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Baby</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Family</span>
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Clothing</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Shopping</span>
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Sports</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Games</span>
+      </p>
+    </div>
+
+  </div>
+  </footer>
+  
+  <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div> -->
+
+    <!-- End page content -->
+  </div>
+
+  <script>
+    // Script to open and close sidebar
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+      document.getElementById("myOverlay").style.display = "block";
+    }
+
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("myOverlay").style.display = "none";
+    }
+  </script>
+
+</body>
+
+</html>

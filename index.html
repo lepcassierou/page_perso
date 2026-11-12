@@ -42,7 +42,15 @@
       border-radius: 4px;
       overflow: hidden;
     }
-    .project-image { width: 100%; height: 100%; min-height: 245px; object-fit: cover; display: block; }
+    /* .project-image { width: 100%; height: 100%; min-height: 245px; object-fit: cover; display: block; } */
+
+    .project-image {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+
     .image-fallback {
       display: none;
       min-height: 245px;
@@ -244,7 +252,6 @@
       <!-- Projects -->
       <section class="section" id="projects">
         <h2 class="section-title">Selected Projects</h2>
-        <p class="content intro muted">A selection of applied data science and research projects. Project images below are placeholders: replace them with screenshots or figures from your own work.</p>
 
         <article class="project-card w3-row">
           <div class="w3-col l5 m5">
@@ -257,13 +264,15 @@
           <div class="w3-col l7 m7 project-copy">
             <h3>Spatio-temporal Data Analysis & Urban Microclimates</h3>
             <p>
-              Development of a web application to analyze spatio-temporal data collected by mobile
-              sensors and identify and characterize urban pico-climates using unsupervised machine learning.
+              Development of a web application to analyze spatio-temporal data collected by mobile sensors and identify and characterize urban pico-climates.
             </p>
-            <p>
+            <!-- <p>
               I developed a large part of the frontend and backend, building analysis and visualization
               features around the needs of domain experts. The application was deployed and used with
               real-world data, in collaboration with the Data Engineer responsible for the data pipeline.
+            </p> -->
+            <p>
+              An interactive clustering algorithm is integrated to group meteorological measurements into clusters representing typical urban configurations, referred to as <i>pico-climates</i>. SHAP explanations are further incorporated to identify and interpret the key factors influencing the assignment of measurements to these clusters.
             </p>
             <p><b>Focus:</b> Spatio-temporal data · Unsupervised learning · Data visualization · Web application</p>
           </div>
@@ -272,7 +281,7 @@
         <article class="project-card w3-row">
           <div class="w3-col l5 m5">
             <!-- Replace this file with a figure or visualization from the SUEZ leak-prediction project. -->
-            <img class="project-image" src="./resources/water-leak-prediction.jpg"
+            <img class="project-image" src="./resources/Suez.png"
                  alt="Figure illustrating the water leak prediction project"
                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
             <div class="image-fallback"><div><i class="fa fa-tint fa-3x"></i><p><b>Project image</b><br>Add a figure from the water leak prediction project here.</p></div></div>
@@ -285,33 +294,40 @@
               convolutional neural networks (CNNs).
             </p>
             <p>
-              I also worked on reducing model complexity: more than 95% of the parameters could be
-              pruned without loss of performance, while execution time was divided by five.
-              An interactive visualization interface was developed to help analyze model behavior.
+              I also worked on reducing model complexity: more than 95% of the parameters and 93% of the computation could be pruned without loss of performance, resulting in an execution time divided by five.
             </p>
             <p><b>Focus:</b> Predictive modeling · Deep learning · Model optimization · Explainability</p>
           </div>
         </article>
 
-        <article class="project-card project-flex">
-          <div class="project-media">
-            <img src="./resources/Overview_of_NetPrune.png"
-                alt="Visualization related to explainable artificial intelligence">
+        <article class="project-card w3-row">
+          <div class="w3-col l5 m5">
+            <img class="project-image"
+                src="./resources/Overview_of_NetPrune.png"
+                alt="Visualization related to explainable artificial intelligence"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="image-fallback">
+              <div>
+                <i class="fa fa-brain fa-3x"></i>
+                <p><b>Project image</b><br>Add a visualization of your research here.</p>
+              </div>
+            </div>
           </div>
 
-          <div class="project-copy">
+          <div class="w3-col l7 m7 project-copy">
             <h3>Explainable AI & Deep Learning Visualization</h3>
             <p>
               My PhD research focused on visualization techniques to help
-              understand and explain deep neural networks, compare
+              understand and explain deep neural network predictions, compare
               classification models and inspect network pruning.
             </p>
-            <p>
-              This work led to several research contributions, including the
-              Relative Confusion Matrix (RCM), H²O (Heatmap by Hierarchical
-              Occlusion) and NetPrune. Publications and code are available
-              in the section below.
-            </p>
+            <p>This work led to several research contributions, including:</p>
+            <ul>
+              <li><b>Relative Confusion Matrix (RCM)</b> to visually compare two classification models at the class level.</li>
+              <li><b>H²O (Heatmap by Hierarchical Occlusion)</b> to visualize the impact of image pixels on model predictions.</li>
+              <li><b>NetPrune</b> to analyze neural network components and their contribution to predictions.</li>
+            </ul>
+            <p>Publications and code are available in the section below.</p>
             <p><b>Focus:</b> Explainable AI · Information visualization · Deep learning · Model comparison</p>
           </div>
         </article>
